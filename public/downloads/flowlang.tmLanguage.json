@@ -1,0 +1,32 @@
+{
+  "name": "FlowLang",
+  "scopeName": "source.flowlang",
+  "fileTypes": ["flow"],
+  "patterns": [
+    {
+      "name": "comment.line.double-slash.flowlang",
+      "match": "//.*$"
+    },
+    {
+      "name": "string.quoted.double.flowlang",
+      "begin": "\"",
+      "end": "\""
+    },
+    {
+      "name": "constant.numeric.flowlang",
+      "match": "\\b\\d+(\\.\\d+)?\\b"
+    },
+    {
+      "name": "keyword.control.flowlang",
+      "match": "\\b(let|say|if|repeat|for|in|func|create|id|setText|onClick|style|input|and|or|true|false)\\b"
+    },
+    {
+      "name": "support.function.flowlang",
+      "match": "\\b(len|sum|mean|median|min|max|std|variance|percentile|sort|unique|dot|linspace|normalize|table|column|head|select|filterGt|filterLt|filterEq|filterBetween|sortBy|rename|describe)\\b(?=\\()"
+    },
+    {
+      "name": "keyword.operator.flowlang",
+      "match": "(==|!=|>=|<=|\\.\\.|[+\\-*/=><])"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+// FlowLang starter program
+let sales = table(
+  ["city", "sales", "team"],
+  [
+    ["Delhi", 42, "north"],
+    ["Pune", 18, "west"],
+    ["Jaipur", 31, "north"],
+    ["Chennai", 27, "south"]
+  ]
+)
+
+let north = filterEq(sales, "team", "north")
+let high = filterBetween(sales, "sales", 20, 45)
+let renamed = rename(high, "sales", "revenue")
+
+say describe(sales)
+say renamed
+
+create "section" id panel
+setText panel "Revenue report ready"
+style panel {
+  padding 18
+  background #111827
+  color white
+}
